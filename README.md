@@ -1,6 +1,6 @@
-Evidencias del Entregable
+### Evidencias del Entregable
 
-A continuación se adjuntan las capturas correspondientes al funcionamiento del sistema y los requerimientos solicitados en la rúbrica[cite: 1]:
+A continuación se adjuntan las capturas correspondientes al funcionamiento del sistema y los requerimientos solicitados en la rúbrica:
 
 ### 1. GET /api/events (Público - 200 OK sin token)
 Acceso exitoso al catálogo de eventos sin incluir credenciales en la petición HTTP.
