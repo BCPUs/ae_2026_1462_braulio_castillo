@@ -1,0 +1,220 @@
+{
+  "info": {
+    "_postman_id": "009aec5e-7410-45b9-97bd-3d3166738e49",
+    "name": "ae_2026_1462_postman_collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "55215007",
+    "_collection_link": "https://go.postman.co/collection/55215007-009aec5e-7410-45b9-97bd-3d3166738e49?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "create_events",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJraWQiOiJqMldPV1dNeGpuZzFWRGtwcW5lOUJ1aWtyd2ZiSGptdVJaOUhyNVNlL2g4PSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiIxNDQ4MzRmOC0yMGUxLTcwY2EtYTgzYS0zMjg1NWY3YTkzNmEiLCJpc3MiOiJodHRwczovL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tL3VzLWVhc3QtMV95endOQUxJMkEiLCJ2ZXJzaW9uIjoyLCJjbGllbnRfaWQiOiIzZ3Yyb3FlNG5pa28zczQ3c3JuMWtpdHNrNiIsIm9yaWdpbl9qdGkiOiIzZDZkZTY1My01ZGI5LTQyOTAtYmFiYS05ZjVhZWI2ZDY2MDkiLCJ0b2tlbl91c2UiOiJhY2Nlc3MiLCJzY29wZSI6InBob25lIG9wZW5pZCBlbWFpbCIsImF1dGhfdGltZSI6MTc4MzEyODY1NywiZXhwIjoxNzgzMTMyMjU3LCJpYXQiOjE3ODMxMjg2NTcsImp0aSI6IjIyNWE3YjI5LTFmODQtNGRhMS04MTBkLWI1OTk1YTMyZWVmNyIsInVzZXJuYW1lIjoiMTQ0ODM0ZjgtMjBlMS03MGNhLWE4M2EtMzI4NTVmN2E5MzZhIn0.KwgdJ3drhfXtYAKQP1HGtC7Ola1OC62FIH1QhBThSJ876kxPahKcWeqDveVA6gFZWywMZ5gjINUDssLKC82fY8_x5TFrM3Xe4Uneo_TTRSv7uFIUSLfe3GKDMaKo4FiiwSys31-QbG4shJM9SZcEYlEyf8YjoTPC-J6OlWTSskxvFWwGppdtjbJTIqRPemh4MQRmwWR6tt09WFEln_eyF9vfsjGa73XUACGikzy5m5HpRVjP-vggXSGqo9VYb9lKTAQOjlfwApna17NsCc2tnuAwkDpvRgz_Oq-k52XMe2nMyUFM6dq_1f67Z3TPuys4LlrYfU5z8dMvnbuBp9lpSA",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"Concierto de Rock\",\r\n  \"venue\": \"Estadio Atahualpa\",\r\n  \"totalTickets\": 100\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/events",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "events"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "https://us-east-1yzwnali2a.auth.us-east-1.amazoncognito.com/oauth2/token Copy",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          },
+          {
+            "key": "Cookie",
+            "value": "XSRF-TOKEN=ad54c014-bbd6-495a-a117-7c4fff9ff055"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "type": "text",
+              "key": "grant_type",
+              "value": "authorization_code"
+            },
+            {
+              "type": "text",
+              "key": "client_id",
+              "value": "3gv2oqe4niko3s47srn1kitsk6"
+            },
+            {
+              "type": "text",
+              "key": "client_secret",
+              "value": "14qdd388f1j6fge52el3l5r2ouvcg5sperlno3701t2jj1chgeiu"
+            },
+            {
+              "type": "text",
+              "key": "code",
+              "value": "2ebb4024-4912-4abe-9087-7cdd7cf6acfe"
+            },
+            {
+              "type": "text",
+              "key": "redirect_uri",
+              "value": "https://d84l1y8p4kdic.cloudfront.net"
+            }
+          ]
+        },
+        "url": {
+          "raw": "https://us-east-1yzwnali2a.auth.us-east-1.amazoncognito.com/oauth2/token",
+          "protocol": "https",
+          "host": [
+            "us-east-1yzwnali2a",
+            "auth",
+            "us-east-1",
+            "amazoncognito",
+            "com"
+          ],
+          "path": [
+            "oauth2",
+            "token"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "create_attendee",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJraWQiOiJqMldPV1dNeGpuZzFWRGtwcW5lOUJ1aWtyd2ZiSGptdVJaOUhyNVNlL2g4PSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiIxNDQ4MzRmOC0yMGUxLTcwY2EtYTgzYS0zMjg1NWY3YTkzNmEiLCJpc3MiOiJodHRwczovL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tL3VzLWVhc3QtMV95endOQUxJMkEiLCJ2ZXJzaW9uIjoyLCJjbGllbnRfaWQiOiIzZ3Yyb3FlNG5pa28zczQ3c3JuMWtpdHNrNiIsIm9yaWdpbl9qdGkiOiJjNDk1MzY5OC0wOWZiLTRlMjctYWJhMy0yYTMwMWEyZWIyOGEiLCJ0b2tlbl91c2UiOiJhY2Nlc3MiLCJzY29wZSI6InBob25lIG9wZW5pZCBlbWFpbCIsImF1dGhfdGltZSI6MTc4MzEyODc5MSwiZXhwIjoxNzgzMTMyMzkxLCJpYXQiOjE3ODMxMjg3OTEsImp0aSI6IjgxMmY2YmVhLTFmYjMtNDNjYS1iMDk4LTlkMjdhMThjOGFhNSIsInVzZXJuYW1lIjoiMTQ0ODM0ZjgtMjBlMS03MGNhLWE4M2EtMzI4NTVmN2E5MzZhIn0.AP0eFvgT7ncWVUYmrIt-A9nzpdSSckqK4aCq9ChJiBD015yO3kG_hxIdAJZsCf2oCymrIhmKSfpzyV01etzV9mcAnBUXbAQ5HZvSU2LdQAIBd_cxXyVI6WpLIU69G5NCHllLA-KOoGAQAnlbHgOkyivpofzr-dP-tXqXGO2DMV5Luf9_4_GHWG-Z5nqhQXt422QlspgcgqogL9HjiYtsPJqXK2_nJw8o8GcGVGfk2ecGd_ra7c9sbgCGZOHLmtSfUdm1TH9N_dk7dGnaz1OD8HUbwCLALyAboL9v5kBVSjTVwl7xt1N1E1fcJdTE2KJxibwAUe7aNPOkPCbTATs6Gg",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"Braulio Castillo\",\r\n  \"email\": \"braulio@mail.com\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/attendees",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "attendees"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "create_reservation",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"attendeeId\": 1,\r\n  \"eventId\": 1\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/reservations",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "reservations"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get_events",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/events",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "events"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
